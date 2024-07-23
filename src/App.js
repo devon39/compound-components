@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Tabs from './components/Tabs';
+import TabList from './components/TabList';
+import Tab from './components/Tab';
+import TabPanels from './components/TabPanels';
+import TabPanel from './components/TabPanel';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tabs>
+      <TabList>
+        <Tab>Tab 1</Tab>
+        <Tab>Tab 2</Tab>
+        <Tab>Tab 3</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>Content for Tab 1</TabPanel>
+        <TabPanel>Content for Tab 2</TabPanel>
+        <TabPanel>Content for Tab 3</TabPanel>
+      </TabPanels>
+    </Tabs>
   );
-}
+};
 
 export default App;
